@@ -50,27 +50,24 @@ function typeOfEmail (emailAddress) {
 
     //vergelijkt de string na het apenstaartje met het domain en geeft afhankelijk daarvan de juiste string terug
     if (emailAddress.substring(placeOfChar + 1) === "novi.nl"){
-
-        console.log("Medewerker");
+        return "Medewerker"
 
     } else if (emailAddress.substring(placeOfChar + 1) === "novi-education.nl") {
-
-        console.log("Student");
+        return "Student"
 
     } else {
-
-        console.log("Extern");
+        return "Extern"
     }
 }
 
 // Aanroepen van de functie met verschillende argumenten om te checken of hij werkt.
-typeOfEmail("n.eeken@novi-education.nl")
+const userFunction1 = typeOfEmail("n.eeken@novi-education.nl");
+const userFunction2 = typeOfEmail("t.mellink@novi.nl");
+const userFunction3 = typeOfEmail("novi.nlaapjesk@outlook.com");
+const userFunction4 = typeOfEmail("a.wiersma@outlook.com");
 
-typeOfEmail("t.mellink@novi.nl")
-
-typeOfEmail("novi.nlaapjesk@outlook.com")
-
-typeOfEmail("a.wiersma@outlook.com")
+//Loggen van de functie-returns in de terminal
+console.log(userFunction1, userFunction2, userFunction3, userFunction4);
 
 
 /* Opdracht  3 */
@@ -110,4 +107,5 @@ const domainThree = checkEmailValidity("n.eekenanovi.nl")
 const domainFour = checkEmailValidity("n.eeken@novinl.")
 const domainFive = checkEmailValidity("tessmellink@novi,nl")
 
+//Loggen van de functie-returns in de terminal
 console.log(domainOne, domainTwo, domainThree, domainFour, domainFive);
