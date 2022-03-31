@@ -16,6 +16,17 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 
 // ---- Verwachte uitkomst: 6
 
+// STAPPENPLAN
+// [] 1 => schrijf een loop die iedere indexwaarde in de array checkt, ongeacht de lengte (.length gebruiken)
+// [] 2 => schrijf in de loop een if-statement die alle indexwaarde vergelijkt met een 8 of hoger (X >= 8)
+// [] 3 =>  Hoe zorgt ik ervoor dat wanneer ik een cijfer tegenkom die aan de conditie voldoet, ik dit ergens kan bijhouden? !!!!!!!
+const cumLaudeGrade = [];
+for (let i = 0; i < grades.length; i++) {
+    if (grades[i] >= 8) {
+        cumLaudeGrade.push(grades[i]);
+    }
+}
+console.log(cumLaudeGrade.length);
 
 /*  1b: Omschrijven tot een herbruikbare functie   */
 // Schrijf een functie genaamd cumLaude, die een array van cijfers verwacht (zoals grades) en het aantal Cum laude studenten teruggeeft. Gebruik hiervoor jouw antwoord van 1a.
